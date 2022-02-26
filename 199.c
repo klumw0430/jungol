@@ -10,19 +10,18 @@ typedef struct student {
 
 int main()
 {
-  int num , i, j;
+  int num, i, j;
   scanf("%d", &num);
-  student a[num] , tmp;
+  student a[10] , tmp;
 
   for ( i = 0; i < num; i++)
   {
     scanf("%s %d %d %d", a[i].name, &a[i].ko, &a[i].math, &a[i].en);
     a[i].sum = a[i].ko + a[i].math + a[i].en;
   }
-
   for ( i = 0; i < num; i++)
   {
-    for ( j = i; j < num; i++)
+    for ( j = i; j < num; j++)
     {
       if ( a[i].sum < a[j].sum)
       {
